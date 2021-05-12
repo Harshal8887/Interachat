@@ -9,7 +9,7 @@
 
 - to install the dependencies
 ```bash
-pip install -r reeuirements.txt
+pip install -r requirements.txt
 ```
 
 - now run the file train.py
