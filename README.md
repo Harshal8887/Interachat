@@ -4,24 +4,14 @@
 
 - download and extravt the files
 - open cmd(windows) or terminal(linux) in the current project folder
-- activate the virtual enviroment
+- activate the virtual enviroment(optionml)
 
-* for windows
 
+- to install the dependencies
 ```bash
-.\venv\Scripts\activate
+pip install -r reeuirements.txt
 ```
 
-or
-
-```bash
-source venv/Scripts/activate
-```
-
-- for linux
-  '''bash
-  source venv/bin/scripts/activate
-  '''
 - now run the file train.py
 
 ```bash
