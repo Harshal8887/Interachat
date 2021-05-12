@@ -2,7 +2,7 @@
 
 # intructions to use and install chatbot(development)
 
-- download and extravt the files
+- download and extract the files
 - open cmd(windows) or terminal(linux) in the current project folder
 - activate the virtual enviroment(optionml)
 
@@ -23,5 +23,7 @@ python train.py     or   python3 train.py
 ```bash
 python app.py
 ```
+- test login credential (username: lavesh passwd: lavesh)
+- dataset - cybersecurity (intents.json)
 
 - Enjoy the app!
