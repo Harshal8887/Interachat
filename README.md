@@ -6,7 +6,7 @@
 - open cmd(windows) or terminal(linux) in the current project folder
 - activate the virtual enviroment(optionml)
 
-
+- it is advised to create a virtrual enviroment and run the project inside it [visit](https://docs.python.org/3/library/venv.html)
 - to install the dependencies
 ```bash
 pip install -r requirements.txt
