@@ -392,6 +392,18 @@
       "responses": [
         "Pytho is an programming language it is interpreted languag"
       ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "help",
+        "help me",
+        "what can you do",
+        "what are you",
+        "what are you",
+        "how do you work "
+      ],
+      "responses": ["Hi, How can i help you "]
     }
   ]
 }

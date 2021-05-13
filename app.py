@@ -2,12 +2,13 @@ from tkinter import *
 from chat import get_response, bot_name
 import login
 
-BG_GRAY = "#ABB2B9"
-BG_COLOR = "#17202A"
+BG_GRAY = "#3d5a80"
+BG_COLOR = "#e0fbfc"
 TEXT_COLOR = "#EAECEE"
+TEXT_BLACK = "#293241"
 
-FONT = "Helvetica 14"
-FONT_BOLD = "Helvetica 13 bold"
+FONT = "Helvetica 13 italic"
+FONT_BOLD = "Helvetica 14 bold"
 
 
 class ChatApplication:
@@ -20,13 +21,13 @@ class ChatApplication:
         self.window.mainloop()
 
     def _setup_main_window(self):
-        self.window.title("Chat")
+        self.window.title("Interachat")
         self.window.resizable(width=False, height=False)
         self.window.configure(width=470, height=550, bg=BG_COLOR)
 
         # head label
-        head_label = Label(self.window, bg=BG_COLOR, fg=TEXT_COLOR,
-                           text="Welcome", font=FONT_BOLD, pady=10)
+        head_label = Label(self.window, font=('Helvetica', 15, 'bold'), bg=BG_GRAY, fg=TEXT_COLOR,
+                           text="Welcome",  pady=10)
         head_label.place(relwidth=1)
 
         # tiny divider
@@ -34,14 +35,14 @@ class ChatApplication:
         line.place(relwidth=1, rely=0.07, relheight=0.012)
 
         # text widget
-        self.text_widget = Text(self.window, width=20, height=2, bg=BG_COLOR, fg=TEXT_COLOR,
+        self.text_widget = Text(self.window, width=20, height=2, bg=BG_COLOR, fg=TEXT_BLACK,
                                 font=FONT, padx=5, pady=5)
-        self.text_widget.place(relheight=0.745, relwidth=1, rely=0.08)
+        self.text_widget.place(relheight=0.745, relwidth=0.99, rely=0.08)
         self.text_widget.configure(cursor="arrow", state=DISABLED)
 
         # scroll bar
         scrollbar = Scrollbar(self.text_widget)
-        scrollbar.place(relheight=1, relx=0.974)
+        scrollbar.place(relheight=1, relx=0.979)
         scrollbar.configure(command=self.text_widget.yview)
 
         # bottom label
@@ -49,25 +50,23 @@ class ChatApplication:
         bottom_label.place(relwidth=1, rely=0.825)
 
         # logout button
-        # send_button = Button(bottom_label, text="Send", font=FONT_BOLD, width=20, bg=BG_GRAY,
-        #                      command=lambda: self._on_enter_pressed(None))
-        # send_button.place(relx=0.77, rely=0.008, relheight=0.06, relwidth=0.22)
-        # logout_b = Button(self, bg=bg, bd=0, text=' Log Out', compound='left',
-        #                   fg='white', font=('arial black', 10, 'bold'), command=logout_func())
-        # logout_b.place(x=10, y=410)
+        logout_button = Button(head_label, border=0, text="Logout", font=('Helvetica', 13), fg=TEXT_COLOR, width=20, bg=BG_GRAY,
+                               command=lambda: self.logout_func())
+        logout_button.place(relx=0.84, rely=0.03,
+                            relheight=0.999, relwidth=0.18)
 
         # message entry box
-        self.msg_entry = Entry(bottom_label, bg="#2C3E50",
-                               fg=TEXT_COLOR, font=FONT)
-        self.msg_entry.place(relwidth=0.74, relheight=0.06,
-                             rely=0.008, relx=0.011)
+        self.msg_entry = Entry(bottom_label, bg=BG_COLOR,
+                               fg=TEXT_BLACK, font=FONT)
+        self.msg_entry.place(relwidth=0.73, relheight=0.05,
+                             rely=0.015, relx=0.011)
         self.msg_entry.focus()
         self.msg_entry.bind("<Return>", self._on_enter_pressed)
 
         # send button
-        send_button = Button(bottom_label, text="Send", font=FONT_BOLD, width=20, bg=BG_GRAY,
+        send_button = Button(bottom_label, text="Send", font=FONT_BOLD, width=20, fg='white',  bg="#659aba",
                              command=lambda: self._on_enter_pressed(None))
-        send_button.place(relx=0.77, rely=0.008, relheight=0.06, relwidth=0.22)
+        send_button.place(relx=0.78, rely=0.02, relheight=0.04, relwidth=0.21)
 
     def _on_enter_pressed(self, event):
         msg = self.msg_entry.get()
@@ -93,13 +92,11 @@ class ChatApplication:
     def logout_func(self):
         f = open('isLog.txt', "w")
         to_write = 'Logged Off,'
+        self.window.destroy()
         f.write(to_write)
         f.close()
-        # msg = {'username': username, 'alert': 'Offline', 'message': 'None'}
-        # send(str(msg).encode('utf-8'))
 
         login.login()
-        # logout_img = PhotoImage(file='resources/logout-24.png')
 
 
 if __name__ == "__main__":
