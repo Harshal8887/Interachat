@@ -21,7 +21,7 @@ python train.py     or   python3 train.py
 - now run app.py (make sure internet is connected)
 
 ```bash
-python app.py
+python run.py
 ```
 - test login credential (username: lavesh passwd: lavesh)
 - dataset - cybersecurity (intents.json)
