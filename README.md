@@ -1,6 +1,6 @@
 # Interachat (gui)
 
-# intructions to use and install chatbot(development)
+# instructions to use and install chatbot(development)
 
 - download and extract the files
 - open cmd(windows) or terminal(linux) in the current project folder
