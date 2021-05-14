@@ -20,7 +20,15 @@
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "by",
+        "quit",
+        "exit",
+        "over"
+      ],
       "responses": [
         "See you later, thanks for visiting",
         "Have a nice day",
@@ -33,20 +41,9 @@
       "responses": ["Happy to help!", "Any time!", "My pleasure"]
     },
     {
-      "tag": "greeting",
-      "patterns": [
-        "Hi",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
-      ],
-      "responses": [
-        "Hello, thanks for visiting",
-        "Good to see you again",
-        "Hi there, how can I help?"
-      ],
-      "context_set": ""
+      "tag": "gooday",
+      "patterns": ["Good day"],
+      "responses": ["Good to see you again", "Hi there, how can I help?"]
     },
     {
       "tag": "goodbye",
@@ -58,61 +55,11 @@
       ]
     },
     {
-      "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {
-      "tag": "hours",
-      "patterns": [
-        "What hours are you open?",
-        "What are your hours?",
-        "When are you open?",
-        "When is the time to contact ?",
-        "At what time do you provide services ?"
-      ],
-      "responses": [
-        "We're open every day from 9AM to 9PM",
-        "Our working hours are 9AM to 9PM every day"
-      ]
-    },
-    {
-      "tag": "location",
-      "patterns": [
-        "What is your location?",
-        "Where are you located?",
-        "What is your address?",
-        "Where is your company situated?",
-        "How can we contact you ?",
-        "How can I contact you?"
-      ],
-      "responses": [
-        "We are on BH-5, LPU",
-        "Our company is situated in BH-5, LPU",
-        "We work from BH-5 LPU",
-        "Our location is BH-5 LPU"
-      ]
-    },
-    {
-      "tag": "payments",
-      "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Are you cash only?",
-        "Which credit cards do you accept?"
-      ],
-      "responses": [
-        "We accept VISA, Mastercard and AMEX",
-        "We accept most major credit cards"
-      ]
-    },
-    {
       "tag": "services",
       "patterns": [
         "What are the services that you provide?",
         "Which services do you provide?",
-        "How can you help us?",
-        "What can you do?"
+        "How can you help us?"
       ],
       "responses": [
         "We provide Web Penetration Testing,Android Penetration Testing,Docker Penetration Testing,Vulnerability Assessment,Cyber Crime investigation and many more services."
@@ -346,9 +293,11 @@
     {
       "tag": " file infector virus",
       "patterns": [
-        "Do you provide home delivery?",
-        "Do you deliver the food?",
-        "What are the home delivery options?"
+        "what is file infector virus?",
+        "what are trojans?",
+        "does file infact?",
+        "what are file infectors",
+        "trojan horse"
       ],
       "responses": [
         "A file infector virus attaches itself to executable programs, such as word processors, spreadsheet applications, and computer games. When the virus has infected a program, it propagates to infect other programs on the system, as well as other systems that use a shared infected program. "
@@ -390,12 +339,25 @@
       "tag": "Python",
       "patterns": ["What is python", "is python a snake", "why is python"],
       "responses": [
-        "Pytho is an programming language it is interpreted languag"
+        "Python is an programming language it is interpreted language",
+        "Python is an interpreted high-level general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation"
+      ]
+    },
+    {
+      "tag": "Javascript",
+      "patterns": [
+        "What is javascript",
+        "javascript",
+        "why javascipt is used?"
+      ],
+      "responses": [
+        "JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions."
       ]
     },
     {
       "tag": "help",
       "patterns": [
+        "h",
         "help",
         "help me",
         "what can you do",
@@ -403,7 +365,15 @@
         "what are you",
         "how do you work "
       ],
-      "responses": ["Hi, How can i help you "]
+      "responses": [
+        "Hi, iam a cybersecurity bot you can ask me cyber security related questions(ex: what is computer virus?)",
+        "Hi, iam a cybersecurity bot you can ask me cyber security related questions(ex: what is computer virus?)",
+        "Hi, iam a cybersecurity bot you can ask me cyber security related questions(ex: What is python?)",
+        "Hi, iam a cybersecurity bot you can ask me cyber security related questions(ex: explain Hashing?)",
+        "Hi, iam a cybersecurity bot you can ask me cyber security related questions(ex: What is Decryption?)",
+        "Hi, iam a cybersecurity bot you can ask me cyber security related questions(ex: ethical hackers?)",
+        "Hi, iam a cybersecurity bot you can ask me cyber security related questions(ex: what is firewall?)"
+      ]
     }
   ]
 }

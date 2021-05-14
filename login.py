@@ -13,9 +13,6 @@ def login():
     global log
     log = Tk()
     log.title('Interachat')
-    # log.iconbitmap('E://chat.PNG')
-    # photo = PhotoImage(file="")
-    # log.iconphoto(False, photo)
     log.geometry('310x300+220+170')
     log.configure(bg='#3d5a80')
     log.resizable(0, 0)
@@ -178,7 +175,7 @@ def register():
                 app.ChatApplication()
 
         else:
-            mb.showerror('UniChat', 'Please Fill All The Fields.')
+            mb.showerror('Interachat', 'Please Fill All The Fields.')
 
     submit = Button(reg, text='Submit', font=('Arial Black', 11, 'bold'),
                     bd=0, width=18, bg='#659aba', command=reg_func, fg='white')
