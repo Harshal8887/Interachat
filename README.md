@@ -1,4 +1,4 @@
-# Interachat (gui)
+# Interachat
 
 # instructions to use and install chatbot(development)
 
@@ -23,7 +23,6 @@ python train.py     or   python3 train.py
 ```bash
 python run.py
 ```
-- test login credential (username: lavesh passwd: lavesh)
 - dataset - cybersecurity (intents.json)
 
 - Enjoy the app!
